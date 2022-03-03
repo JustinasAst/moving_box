@@ -78,6 +78,9 @@ const ButtonDiv = styled.div`
     border-radius: 5px;
     color: white;
     text-align: center;
+
     cursor: pointer;
+    -moz-user-select: none;
+    user-select: none;
   }
 `;
