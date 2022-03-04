@@ -7,44 +7,46 @@ function App() {
   const [down, setDown] = useState(0);
 
   const rightMove = () => {
-    left < 750 ? setLeft(left + 50) : setLeft(750);
+    const valueStillInBounds = left < 750;
+    if (valueStillInBounds) setLeft(left + 50);
   };
 
   const leftMove = () => {
-    left > 0 ? setLeft(left - 50) : setLeft(0);
+    const valueStillInBounds = left > 0;
+    if (valueStillInBounds) setLeft(left - 50);
   };
 
   const uptMove = () => {
-    down > 0 ? setDown(down - 50) : setDown(0);
+    const valueStillInBounds = down > 0;
+    if (valueStillInBounds) setDown(down - 50);
   };
 
   const downMowe = () => {
-    down < 750 ? setDown(down + 50) : setDown(750);
+    const valueStillInBounds = down < 750;
+    if (valueStillInBounds) setDown(down + 50);
   };
-
-  console.log(left);
 
   return (
     <div>
-      <div className="mainDiv">
+      <div className="main-div">
         <CenterDiv>
           <div
-            className="midleDiv"
+            className="midle-div"
             style={{ transform: `translate(${left}px, ${down}px` }}
           />
         </CenterDiv>
       </div>
       <ButtonDiv>
-        <div className="div4" onClick={rightMove}>
+        <div className="button-right" onClick={rightMove}>
           RIGHT
         </div>
-        <div className="div3" onClick={leftMove}>
+        <div className="button-left" onClick={leftMove}>
           LEFT
         </div>
-        <div className="div1" onClick={uptMove}>
+        <div className="button-up" onClick={uptMove}>
           UP
         </div>
-        <div className="div2" onClick={downMowe}>
+        <div className="button-down" onClick={downMowe}>
           DOWN
         </div>
       </ButtonDiv>
