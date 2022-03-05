@@ -29,14 +29,14 @@ function App() {
   return (
     <div>
       <div className="main-div">
-        <CenterDiv>
+        <div className="center-div">
           <div
             className="midle-div"
             style={{ transform: `translate(${left}px, ${down}px` }}
           />
-        </CenterDiv>
+        </div>
       </div>
-      <ButtonDiv>
+      <div className="button-div">
         <div className="button-right" onClick={rightMove}>
           RIGHT
         </div>
@@ -49,40 +49,9 @@ function App() {
         <div className="button-down" onClick={downMowe}>
           DOWN
         </div>
-      </ButtonDiv>
+      </div>
     </div>
   );
 }
 
 export default App;
-
-const CenterDiv = styled.div`
-  box-sizing: border-box;
-  width: 800px;
-  height: 800px;
-  background-color: green;
-  position: relative;
-`;
-
-const ButtonDiv = styled.div`
-  box-sizing: border-box;
-  width: 800px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-
-  div {
-    background: gray;
-    padding: 5px 0;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-
-    cursor: pointer;
-    -moz-user-select: none;
-    user-select: none;
-  }
-`;
