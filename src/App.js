@@ -27,15 +27,15 @@ function App() {
 
   return (
     <div>
-      <div className="main-div">
-        <div className="center-div">
+      <div className="main-block">
+        <div className="center-block">
           <div
-            className="midle-div"
+            className="midle-block"
             style={{ transform: `translate(${left}px, ${down}px` }}
           />
         </div>
       </div>
-      <div className="button-div">
+      <div className="button-block">
         <div className="button-right" onClick={rightMove}>
           RIGHT
         </div>
